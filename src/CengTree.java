@@ -10,7 +10,6 @@ public class CengTree
         CengTreeNode.order = order;
         // TODO: Initialize the class
         root = new CengTreeNodeLeaf(null);
-        root.level = 0;
 
     }
 
@@ -167,10 +166,10 @@ public class CengTree
             parent_tmp.addChild(childIndex + 1, newNode2);
         }
 
-        newNode1.setParent((CengTreeNode) parent_tmp);
-        newNode2.setParent((CengTreeNode) parent_tmp);
+        newNode1.setParent(parent_tmp);
+        newNode2.setParent(parent_tmp);
 
-        return (CengTreeNode) parent_tmp;
+        return parent_tmp;
 
     }
 
@@ -220,10 +219,10 @@ public class CengTree
             parent_tmp.addChild(childIndex + 1, new_node2);
         }
 
-        new_node1.setParent((CengTreeNode) parent_tmp);
-        new_node2.setParent((CengTreeNode) parent_tmp);
+        new_node1.setParent(parent_tmp);
+        new_node2.setParent(parent_tmp);
 
-        return (CengTreeNode) parent_tmp;
+        return parent_tmp;
 
     }
 
